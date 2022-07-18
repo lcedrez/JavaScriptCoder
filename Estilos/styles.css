@@ -1,0 +1,330 @@
+@charset "UTF-8";
+.contenedorContacto {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em; }
+
+.contenedorForm {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  background: #222222; }
+  .contenedorForm h3 {
+    color: #aff158;
+    font-size: xx-large; }
+  .contenedorForm > * {
+    padding: 1em;
+    color: white;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace; }
+
+/*Eligo todos los elementos dentro del contenedor apra darles mismo diseño*/
+.contactInfo {
+  padding-top: 20px;
+  color: black;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; }
+  .contactInfo img {
+    width: 20px; }
+
+/*A todos los elementos de mi contenedor les doy el mismo diseño*/
+.contenedorForm form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .contenedorForm form button, .contenedorForm form input, .contenedorForm form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #aff158; }
+
+.contenedorForm p {
+  margin: 0;
+  padding: 2em; }
+
+.contenedorForm .areaMensaje {
+  grid-column: 1/3; }
+
+.contenedorForm form button {
+  background-color: #aff158;
+  color: black;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em; }
+  .contenedorForm form button:hover, .contenedorForm form button:focus {
+    background: #fff;
+    color: black;
+    transition: background-color 1s ease-out;
+    outline: 0; }
+
+.contactInfo ul {
+  list-style: none;
+  padding: 0; }
+  .contactInfo ul li {
+    padding: .5em; }
+
+.contactInfo .contactInfo h4, .contactInfo ul .contactInfo p {
+  text-align: center;
+  margin: 0 0 1rem 0; }
+
+header {
+  width: 100%;
+  padding-bottom: 10px;
+  position: relative; }
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-self: start;
+    flex-direction: row;
+    align-content: center; }
+  header ul {
+    display: flex;
+    column-gap: 80px;
+    padding-left: 120px; }
+  header li {
+    list-style-type: none; }
+  header a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-size: large; }
+
+.blue {
+  color: blue; }
+
+.green {
+  color: green; }
+
+.yellow {
+  color: yellow; }
+
+.black {
+  color: black; }
+
+.red {
+  color: red; }
+
+.btntwitter {
+  background-color: blue; }
+
+.btnfacebook {
+  background-color: green; }
+
+.btninstagram {
+  background-color: red; }
+
+.btnwhatsapp {
+  background-color: green; }
+
+/*MAPS MAP-GET*/
+.mainHistoria {
+  background-color: gray;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px;
+  margin-top: 100px;
+  border-top: 6px solid #aff158;
+  border-bottom: 6px solid #aff158; }
+
+.mainHistoria p {
+  color: #687557; }
+
+/*EXTEND*/
+.box, .box_especial {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace; }
+
+.box_especial {
+  color: black;
+  font-size: 20px;
+  border: 2px solid black;
+  text-align: center; }
+
+/*MIXIN*/
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.carousel-inner {
+  height: 500px; }
+
+.pie-pagina {
+  width: 100%;
+  background-color: black; }
+  .pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(125px, auto);
+    grid-gap: 5rem;
+    padding: 45px 0px;
+    background-color: black; }
+    .pie-pagina .grupo-1 .box figure, .pie-pagina .grupo-1 .box_especial figure {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .pie-pagina .grupo-1 .box figure img, .pie-pagina .grupo-1 .box_especial figure img {
+        width: 250px; }
+    .pie-pagina .grupo-1 .box h2, .pie-pagina .grupo-1 .box_especial h2 {
+      color: #fff;
+      margin-bottom: 25px;
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace; }
+    .pie-pagina .grupo-1 .box p, .pie-pagina .grupo-1 .box_especial p {
+      color: #efefef;
+      margin-bottom: 10px;
+      font-family: 'Courier New', Courier, monospace; }
+    .pie-pagina .grupo-1 .red-social a {
+      display: inline-block;
+      text-decoration: none;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: #fff;
+      margin-right: 10px;
+      background-color: #e8ecf0;
+      text-align: center;
+      transition: all 300ms ease;
+      font-family: 'Courier New', Courier, monospace; }
+      .pie-pagina .grupo-1 .red-social a:hover {
+        color: #e7f3f3; }
+  .pie-pagina .grupo-2 {
+    background-color: #ecf0f3;
+    padding-bottom: 0;
+    text-align: center;
+    color: black; }
+    .pie-pagina .grupo-2 small {
+      font-size: 15px; }
+  .pie-pagina .grupo-1 h2 {
+    text-align: center; }
+
+.box__imagen img {
+  width: 200px;
+  padding-top: 3px;
+  margin: 5px;
+  overflow: hidden; }
+  .box__imagen img:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px white;
+    -webkit-box-shadow: 0px 0px 15px 15px white;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg); }
+
+/*Efecto en Logo*/
+.red-social {
+  background-color: black;
+  text-align: center;
+  padding: 20px; }
+  .red-social img {
+    width: 30px;
+    padding-top: 3px;
+    margin: 5px; }
+
+.pie-pagina {
+  grid-column: 1/6;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white; }
+
+#galeria {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  #galeria li {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
+    background: PaleGoldenrod;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6); }
+    #galeria li figure {
+      margin: 0; }
+    #galeria li h3 {
+      font-size: xx-large;
+      margin: 0 0 10px;
+      transform: translateX(-300px);
+      opacity: 0;
+      transition: all 1.5s ease; }
+    #galeria li p {
+      font-size: large;
+      margin: 0;
+      transform: translateX(300px);
+      opacity: 0;
+      transition: all 1s ease; }
+    #galeria li:hover h3, #galeria li:hover p {
+      transform: translateX(0px);
+      opacity: 1; }
+    #galeria li figure img {
+      width: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transform: scale(1);
+      opacity: 1;
+      transition: all 1s ease; }
+    #galeria li:hover figure img {
+      transform: scale(10);
+      opacity: 0; }
+
+.card-img-top {
+  width: 200px; }
+
+.card img {
+  align-items: center;
+  width: 200px; }
+
+.mainHistoria {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px;
+  background-color: black;
+  margin-top: 100px;
+  border-top: 6px solid #aff158;
+  border-bottom: 6px solid #aff158; }
+  .mainHistoria p {
+    color: #aff158;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace; }
+  .mainHistoria img {
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px; }
+    .mainHistoria img:hover {
+      filter: sepia(60%); }
+
+.tituloHistoria {
+  color: #aff158;
+  font-family: 'Courier New', Courier, monospace; }

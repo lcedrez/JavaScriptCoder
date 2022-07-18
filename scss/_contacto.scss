@@ -1,0 +1,96 @@
+.contenedorContacto {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+  }
+  
+  .contenedorForm {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+    background: #222222;
+  
+    h3 {
+      color: rgb(175, 241, 88);
+      font-size: xx-large;
+    }
+  
+    > * {
+      padding: 1em;
+      color: white;
+      font-size: x-large;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  }
+  
+  /*Eligo todos los elementos dentro del contenedor apra darles mismo diseño*/
+  
+  .contactInfo {
+    padding-top: 20px;
+    color: black;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+  
+    img {
+      width: 20px;
+    }
+  }
+  
+  /*A todos los elementos de mi contenedor les doy el mismo diseño*/
+  
+  .contenedorForm {
+    form {
+      button, input, textarea {
+        width: 100%;
+        padding: .7em;
+        border: none;
+        background: none;
+        outline: 0;
+        color: #fff;
+        border-bottom: 1px solid rgb(175, 241, 88);
+      }
+  
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    p {
+      margin: 0;
+      padding: 2em;
+    }
+  
+    .areaMensaje {
+      grid-column: 1/3;
+    }
+  
+    form button {
+      background-color: rgb(175, 241, 88);
+      color: black;
+      border: 0;
+      text-transform: uppercase;
+      padding: 1em;
+  
+      &:hover, &:focus {
+        background: #fff;
+        color: black;
+        transition: background-color 1s ease-out;
+        outline: 0;
+      }
+    }
+  }
+  
+  .contactInfo {
+    ul {
+      li {
+        padding: .5em;
+      }
+  
+      list-style: none;
+      padding: 0;
+    }
+  
+    .contactInfo h4, ul .contactInfo p {
+      text-align: center;
+      margin: 0 0 1rem 0;
+    }
+  }

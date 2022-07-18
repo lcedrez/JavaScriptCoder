@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Estilos/estilos.css">
+    <link rel="icon" href="Imagenes/B.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <meta name="Keywords" content="Tienda,compra,los 4 de Liverpool, Beatles,The Fab Four,Penny Lane, John, George, Paul ,Ringo">
+    <meta name="Description " content="Tienda Online para compra de articulos The Beatles">
+    <title>Login - The Beatles</title>
+</head>
+<body>
+  <div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="contenedorContacto">
+
+                
+                    <div class="contenedorForm">
+                        <h3>LOGIN</h3>
+                        <form action="">
+                            <p>
+                                <label>Usuario</label>
+                                <input id="IngresoUser" type="text" name="fullname" onkeyup="if(event.keyCode == 13) recogerDatos()">
+                            </p>
+                            <p>
+                                <label>Password</label>
+                                <input id="IngresoPass" type="password" name="password"onkeyup="if(event.keyCode == 13) recogerDatos()">
+                                
+                            </p>
+                           
+                            <p class="areaMensaje">
+                                <button type="button" onclick="recogerDatos()" onkeyup="if(event.keyCode == 13) recogerDatos()" >
+                                    Ingresar
+                                </button>
+                                
+                          </p>
+                          <p class="areaMensaje">
+                            
+                            <button type="button" onclick="location.href='Paginas/Registro.html'">
+                              Registrarme
+                              
+                          </button>
+                          </p>
+                            </p>
+                        </form>
+    <script src="javascript/app.js"></script>
+</body>
+</html>

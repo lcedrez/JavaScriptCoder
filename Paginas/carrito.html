@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/30ad0d4992.js" crossorigin="anonymous"></script>   
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Estilos/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="../Imagenes/B.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <meta name="Keywords" content="Tienda,compra,los 4 de Liverpool, Beatles,The Fab Four,Penny Lane, John, George, Paul ,Ringo">
+    <meta name="Description " content="Tienda Online para compra de articulos The Beatles">
+    <title>Tienda Online - The Beatles</title>
+</head>
+<body>
+    <div class="bodyTiendaCarrito">
+  
+    <header>
+
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img src="../Imagenes/LogoStoreUruguay.svg" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/BeatlesOutlet.html">Beatles Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Media.html">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Toys.html">Toys & Games</a>  
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Accesories.html">Accesorios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Home.html">Home</a>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Outfit.html">Outfit</a>
+                        </li>
+                        <li>
+                            
+                        </li>
+                        
+                        </ul>
+                        <label class="cantItem" id="cantidadItem">0</label>
+                        <i id="carritoSearch"class="fa-solid fa-cart-shopping"></i>
+                        
+                         <label for="">U$S</label>  <span id="spanTotal">0.00</span>
+                    </div>
+                    </div>
+                </nav>
+               
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+      <div class="contenedorInfo">
+        <i id="iconoConten" class="fa-solid fa-clock-rotate-left"></i> <h1 class="tituloPedido">PEDIDO EN CURSO</h1>
+      </div>
+
+      <div class="carritoTitulo">
+        Mi carrito (<span id="cart-items-qty">0</span> Item) <a class="continuarComprando" href="../index.html">Continúa comprando</a>
+    </div>
+    
+
+
+
+
+
+<div id="ContCarro" >
+
+<div id="contenedorCarro" class="cardi">
+    
+                    
+</div>
+
+<div class="contenedorResumen">
+    <div class="totalResumen">
+        <h3>Resumen del pedido</h3>
+
+        <div id="subtotal"  class="resumenTotal">
+                <div class="itemsCredito">
+                    <h3>Sub Total : U$S <span id="spanTotal2">0</span></h3>
+                    <h6>o en 12 cuotas de U$S <span id="parrafoCuotas">0</span></h6>
+                <img class="tarjetas" src="../Imagenes/E-Commerce/icono-paypal-tarjetas.webp" alt="">
+                
+                </div>
+                    
+        </div>
+
+            <div class="btnFinalizar">
+                <button id="btnFinalizaCompra" type="button" title="Finalizar compra" class="btn" >
+                    <span>
+                    <span>Finalizar compra</span>
+                    </span>
+                </button>
+            </div>
+    </div>
+</div>
+</div>    
+
+
+        
+
+     
+
+    <div id= " pie" class="row">
+        <div class="columna col-md-12">
+            <footer class="pie-pagina">
+                <div class="grupo-1">
+                    <div class="box">
+                        <div class="box__imagen">
+                            <a href="index.html">
+                                <img src="../Imagenes/Whitelogo.jpg" alt="The Beatles">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h2>SOBRE NOSOTROS</h2>
+                        <p>Somos un grupo de personsa que decidimos dedicar esta Web como tributo a The Beatles por su innegable aporte musical y cultural que hicieron al mundo.</p>
+                        
+                    </div>
+                    <div class="box">
+                        <h2>SIGUENOS</h2>
+                        <div class="red-social">
+                            <a  class="fa-facebook" title="Facebook" href="https://www.facebook.com/thebeatles" target="_blank"><img src="../Imagenes/facebook1.png" alt="Facebook"></a>
+                            <a  class="fa-instagram" title="Instagram" href="https://www.instagram.com/thebeatles/?hl=es-la" target="_blank"><img src="../Imagenes/instagram (1).png" alt="Instagram"></a>
+                            <a  class="fa-spotify" title="Spotify" href="https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2" target="_blank"><img src="../Imagenes/spotify (1).png" alt="Spotify"></a>
+                            <a  class="fa-youtube" title="Youtube" href="https://www.youtube.com/c/TheBeatles" target="_blank"><img src="../Iconos/youtube.png" alt="Youtube"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo-2">
+                    <small>&copy; 2022 <b>Apple Records</b> - Todos los Derechos Reservados.</small>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.18/dist/sweetalert2.all.min.js"></script>  
+    <script src="../javascript/claseArticulo.js"></script>
+    <script src="../javascript/claseUsuario.js"></script>
+    
+   
+    <script src="../javascript/appCarrito.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+.pie-pagina {
+    width: 100%;
+    background-color: black;
+  
+    .grupo-1 {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(125px, auto);
+      grid-gap: 5rem;
+      padding: 45px 0px;
+      background-color: black;
+  
+      .box {
+        figure {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          img {
+            width: 250px;
+          }
+        }
+  
+        h2 {
+          color: #fff;
+          margin-bottom: 25px;
+          font-size: 20px;
+          font-family: 'Courier New', Courier, monospace;
+        }
+  
+        p {
+          color: #efefef;
+          margin-bottom: 10px;
+          font-family: 'Courier New', Courier, monospace;
+        }
+      }
+  
+      .red-social a {
+        display: inline-block;
+        text-decoration: none;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        margin-right: 10px;
+        background-color: #e8ecf0;
+        text-align: center;
+        transition: all 300ms ease;
+        font-family: 'Courier New', Courier, monospace;
+  
+        &:hover {
+          color: rgb(231, 243, 243);
+        }
+      }
+    }
+  
+    .grupo-2 {
+      background-color: #ecf0f3;
+      padding-bottom: 0;
+      text-align: center;
+      color: black;
+  
+      small {
+        font-size: 15px;
+      }
+    }
+  
+    .grupo-1 h2 {
+      text-align: center;
+    }
+  }
+  
+  .box__imagen img {
+    width: 200px;
+    padding-top: 3px;
+    margin: 5px;
+    overflow: hidden;
+  
+    &:hover {
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      box-shadow: 0px 0px 15px 15px white;
+      -webkit-box-shadow: 0px 0px 15px 15px white;
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  /*Efecto en Logo*/
+  
+  .red-social {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+  
+    img {
+      width: 30px;
+      padding-top: 3px;
+      margin: 5px;
+    }
+  }
+  
+  .pie-pagina {
+    grid-column: 1/6;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+  }

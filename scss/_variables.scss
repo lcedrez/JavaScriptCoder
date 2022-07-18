@@ -1,0 +1,89 @@
+@each $color in blue,green,yellow,black,red{
+    .#{$color}{
+        color:#{$color};
+    }
+};
+
+$redes:(
+    twitter:blue,
+    facebook:green,
+    instagram:red,
+    whatsapp:green
+
+);
+
+@each $red,$color in $redes{
+    .btn#{$red}{
+        background-color: $color;
+
+    }
+
+}
+
+/*MAPS MAP-GET*/
+
+$estilos:(
+tam:100%,
+tammax:1000px,
+colorFondo:gray,
+colorFuente:rgb(104, 117, 87),
+margen:auto,
+padd:60px,
+margenarriba: 100px,
+bordeArriba: 6px solid rgb(175, 241, 88),
+bordeAbajo: 6px solid rgb(175, 241, 88)
+
+);
+
+.mainHistoria{
+    background-color: map-get($estilos, colorFondo );
+    width:map-get($estilos, tam );
+    max-width:map-get($estilos, tammax );
+    margin:map-get($estilos, margen);
+    padding: map-get($estilos,padd);
+    margin-top: map-get($estilos,margenarriba);
+    border-top: map-get($estilos,bordeArriba);
+    border-bottom: map-get($estilos,bordeAbajo);
+}
+
+.mainHistoria p{
+    color:map-get($estilos,colorFuente);
+}
+
+/*EXTEND*/
+.box{
+    width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+}
+
+.box_especial {
+    @extend .box;
+    color:black;
+    font-size: 20px;
+    border:2px solid black;
+    text-align: center;
+
+}
+
+/*MIXIN*/
+
+@mixin flexbox($flex,$wrap,$justify){
+    display: $flex;
+    flex-wrap:$wrap;
+    justify-content: $justify;
+}
+
+.galeria{
+    @include flexbox(flex,wrap,space-between)
+
+}
+
+
+
+

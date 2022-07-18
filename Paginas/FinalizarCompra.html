@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/30ad0d4992.js" crossorigin="anonymous"></script>   
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Estilos/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="../Imagenes/B.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <meta name="Keywords" content="Tienda,compra,los 4 de Liverpool, Beatles,The Fab Four,Penny Lane, John, George, Paul ,Ringo">
+    <meta name="Description " content="Tienda Online para compra de articulos The Beatles">
+    <title>Tienda Online - The Beatles</title>
+</head>
+<body class="bodyCompra">
+    <div class="bodyTienda">
+
+        
+  
+    <header>
+
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img src="../Imagenes/LogoStoreUruguay.svg" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/BeatlesOutlet.html">Beatles Outlet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Media.html">Media</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Toys.html">Toys & Games</a>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Home.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="../Paginas/Accesories.html">Accesories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../Paginas/FinalizarCompra.html">Outfit</a>
+                        </li>
+                        <li>
+                            
+                        </li>
+                        
+                        </ul>
+                       
+                    </div>
+                    </div>
+                </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="contenedorFin">
+    <div id="centralFin">
+        <div id="login">
+           <h1>Datos de Envío</h1>
+            <form id="loginform">
+                <h3>Dirección <span>*</span></h3>
+                <input id="direccion" type="text" name="Direccion" placeholder="Dirección" required>
+                <h3>Esquina</h3>
+                <input id="Esquina" type="text" name="Esquina" placeholder="Esquina">
+                
+                <h3>Departamento <span>*</span></h3>
+                <select id="Departamento" class="dropDepto">
+                    <option hidden value="Montevideo">Montevideo</option>
+                      <option value="Artigas">Artigas</option>
+                      <option value="Durazno">Durazno</option>
+                      <option value="Flores">Flores</option>
+                      <option value="Florida">Florida</option>
+                      <option value="Maldonado">Maldonado</option>
+                      <option value="Montevideo">Montevideo</option>
+                      <option value="Paysandú">Paysandú</option>
+                      <option value="Rivera">Rivera</option>
+                      <option value="Salto">Salto</option>
+                      <option value="Tacuarembó">Tacuarembó</option>
+
+                      
+                    </select>
+                    <br>
+                    <br>
+                    <h3>Ciudad / Barrio<span>*</span></h3>
+                    <input id="CiudBarr" type="text" name="Ciudad" placeholder="Ciudad / Barrio" required>
+                    <h3>Telefono / Celular <span>*</span></h3>
+                    <input id="telFin" type="text" name="Telefono" placeholder="Telefono / Celular" required>
+
+                 
+                        <br>
+                      
+            </form>
+            
+        </div>
+       
+    </div>
+    <div class="contenedorResumen">
+        <div class="totalResumen">
+            <h3>Resumen del pedido</h3>
+    
+            <div id="subtotal"  class="resumenTotal">
+                    <div class="itemsCredito">
+                        <h3>Cantidad de Items <span id="itemsTotal">0</span></h3>
+                        <h3>Sub Total : U$S <span id="spanTotal2">0</span></h3>
+                        <h6>o en 12 cuotas de U$S <span id="parrafoCuotas">0</span></h6>
+                    <img class="tarjetas" src="../Imagenes/E-Commerce/icono-paypal-tarjetas.webp" alt="">
+                    
+                    </div>
+                        
+            </div>
+    
+               
+        </div>
+    </div>
+    </div>    
+</div>
+
+<div class="contenedorTarjeta">
+
+    <!-- Tarjeta -->
+    <section class="tarjeta" id="tarjeta">
+        <div class="delantera">
+            <div class="logo-marca" id="logo-marca">
+                <!-- <img src="img/logos/visa.png" alt=""> -->
+            </div>
+            <img src="../Imagenes/Tarjeta/chip-tarjeta.png" class="chip" alt="">
+            <div class="datos">
+                <div class="grupo" id="numero">
+                    <p class="labelTarjeta">Número Tarjeta</p>
+                    <p class="numero">#### #### #### ####</p>
+                </div>
+                <div class="flexbox">
+                    <div class="grupo" id="nombre">
+                        <p class="labelTarjeta">Nombre Tarjeta</p>
+                        <p class="nombre">Jhon Doe</p>
+                    </div>
+
+                    <div class="grupo" id="expiracion">
+                        <p class="labelTarjeta">Expiracion</p>
+                        <p class="labelTarjeta"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trasera">
+            <div class="barra-magnetica"></div>
+            <div class="datos">
+                <div class="grupo" id="firma">
+                    <p class="labelTarjeta">Firma</p>
+                    <div class="firma"><p></p></div>
+                </div>
+                <div class="grupo" id="ccv">
+                    <p class="labelTarjeta">CCV</p>
+                    <p class="ccv"></p>
+                </div>
+            </div>
+            <p class="labelTarjeta">El uso de esta tarjeta se rige por los terminos y condiciones que se estipulan en la solicitud de emisión y contrato para su uso.</p>
+            <a href="#" class="labelTarjeta">www.tubanco.com</a>
+        </div>
+    </section>
+
+    <!-- Contenedor Boton Abrir Formulario -->
+    <div class="contenedor-btn">
+        <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <!-- Formulario -->
+    <form action="" id="formulario-tarjeta" class="formulario-tarjeta active">
+        <div class="grupo">
+            
+            <h3 for="inputNumero" class="formTarjet">Número Tarjeta</h3>
+            <input type="text" id="inputNumero" maxlength="19" autocomplete="off" required>
+        </div>
+        <div class="grupo">
+            <h3 for="inputNombre"class="formTarjet">Nombre</h3>
+            <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
+        </div>
+        <div class="flexbox">
+            <div class="grupo expira">
+                <h3 for="selectMes">Expiracion</h3>
+                <div class="flexbox">
+                    <div class="grupo-select">
+                        <select name="mes" id="selectMes" required>
+                            <option value="">Año</option>
+                        </select>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="grupo-select">
+                        <select name="year" id="selectYear" required>
+                            <option value="">Año</option>
+                        </select>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grupo ccv">
+                <h3 class="formTarjet" for="inputCCV">CCV</h3>
+                <input type="text" id="inputCCV" maxlength="3" required>
+            </div>
+        </div>
+        <button id="btnFinalizarCompra" type="submit" class="btn-enviar">FINALIZAR COMPRA</button>
+    </form>
+</div>
+
+
+        
+
+     
+
+    <div id= " pie" class="row">
+        <div class="columna col-md-12">
+            <footer class="pie-pagina">
+                <div class="grupo-1">
+                    <div class="box">
+                        <div class="box__imagen">
+                            <a href="index.html">
+                                <img src="../Imagenes/Whitelogo.jpg" alt="The Beatles">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h2>SOBRE NOSOTROS</h2>
+                        <p>Somos un grupo de personsa que decidimos dedicar esta Web como tributo a The Beatles por su innegable aporte musical y cultural que hicieron al mundo.</p>
+                        
+                    </div>
+                    <div class="box">
+                        <h2>SIGUENOS</h2>
+                        <div class="red-social">
+                            <a  class="fa-facebook" title="Facebook" href="https://www.facebook.com/thebeatles" target="_blank"><img src="../Imagenes/facebook1.png" alt="Facebook"></a>
+                            <a  class="fa-instagram" title="Instagram" href="https://www.instagram.com/thebeatles/?hl=es-la" target="_blank"><img src="../Imagenes/instagram (1).png" alt="Instagram"></a>
+                            <a  class="fa-spotify" title="Spotify" href="https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2" target="_blank"><img src="../Imagenes/spotify (1).png" alt="Spotify"></a>
+                            <a  class="fa-youtube" title="Youtube" href="https://www.youtube.com/c/TheBeatles" target="_blank"><img src="../Iconos/youtube.png" alt="Youtube"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo-2">
+                    <small>&copy; 2022 <b>Apple Records</b> - Todos los Derechos Reservados.</small>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.18/dist/sweetalert2.all.min.js"></script>  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.18/dist/sweetalert2.all.min.js"></script>  
+    <script src="../javascript/claseArticulo.js"></script>
+    <script src="../javascript/claseUsuario.js"></script>
+    <script src="../javascript/datos.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="../javascript/FinalizarCompra.js"></script>
+
+   
+</body>
+</html>

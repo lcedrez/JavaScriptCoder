@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="6.0+" codebase="http://192.168.189.228:8080" href="http://192.168.189.228:8080/navegador.jnlp">
+	<information>
+		<title>Navegador Nodum (192.168.189.228)</title>
+		<vendor>Nodum</vendor>
+		<homepage href="http://www.nodum.com.uy" />
+		<description>Download: Navegador Nodum</description>
+		<icon href="/jws-nodum/iconNN_64.gif" kind="default" width="64" height="64"/>
+		<icon href="/jws-nodum/iconNN_48.gif" kind="shortcut" width="48" height="48"/>
+		<icon href="/jws-nodum/iconNN_32.gif" kind="shortcut" width="32" height="32"/>
+		<icon kind="splash" href="/jws-nodum/splashNNws.jpg"/>
+		<shortcut online="true"> 
+			<desktop/> 
+			<menu submenu="Nodum (192.168.189.228)"/> 
+		</shortcut> 
+	</information>
+	
+	<update check="always" policy="always"/>
+	
+	<security>
+		<all-permissions/>
+	</security>
+	<resources>
+
+		
+<java version="9+" initial-heap-size="64M" max-heap-size="512M" java-vm-args="--add-exports=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED --add-exports=java.base/sun.util.calendar=ALL-UNNAMED --add-exports=jdk.deploy/com.sun.deploy.net=ALL-UNNAMED --add-exports=javafx.base/com.sun.javafx.runtime=ALL-UNNAMED --add-exports=javafx.base/com.sun.javafx.event=ALL-UNNAMED --add-exports=javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED --add-exports=javafx.graphics/com.sun.javafx.scene.traversal=ALL-UNNAMED --add-opens=javafx.controls/javafx.scene.control.skin=ALL-UNNAMED --add-exports=javafx.controls/com.sun.javafx.charts=ALL-UNNAMED">
+<resources>
+<jar href="/jws-lib/activation-1.1.1.jar"/>
+<jar href="/jws-lib/controlsfx-9.0.0.jar"/>
+<jar href="/jws-lib/enzo-gauge-0.3.6.jar"/>
+<jar href="/jws-lib/enzo-common-0.3.6.jar"/>
+<jar href="/jws-lib/enzo-fonts-0.3.6.jar"/>
+
+<jar href="/jws-dashboards/dashboards-cliente.jar"/>
+
+<jar href="/jws-lib/common-image-3.5.jar"/>
+<jar href="/jws-lib/common-io-3.5.jar"/>
+<jar href="/jws-lib/common-lang-3.5.jar"/>
+<jar href="/jws-lib/imageio-core-3.5.jar"/>
+<jar href="/jws-lib/imageio-metadata-3.5.jar"/>
+<jar href="/jws-lib/imageio-jpeg-3.5.jar"/>
+</resources>
+</java>
+<java version="1.8" initial-heap-size="64M" max-heap-size="512M">
+<resources>
+<jar href="/jws-lib/controlsfx-8.40.14.jar"/>
+<jar href="/jws-lib/enzo-gauge-0.3.6.jar"/>
+<jar href="/jws-lib/enzo-common-0.3.6.jar"/>
+<jar href="/jws-lib/enzo-fonts-0.3.6.jar"/>
+
+<jar href="/jws-dashboards/dashboards-cliente.jar"/>
+
+<jar href="/jws-lib/common-image-3.5.jar"/>
+<jar href="/jws-lib/common-io-3.5.jar"/>
+<jar href="/jws-lib/common-lang-3.5.jar"/>
+<jar href="/jws-lib/imageio-core-3.5.jar"/>
+<jar href="/jws-lib/imageio-metadata-3.5.jar"/>
+<jar href="/jws-lib/imageio-jpeg-3.5.jar"/>
+</resources>
+</java>
+<java version="1.7" initial-heap-size="64M" max-heap-size="512M">
+<resources>
+<jar href="/jws-lib/common-image-3.5.jar"/>
+<jar href="/jws-lib/common-io-3.5.jar"/>
+<jar href="/jws-lib/common-lang-3.5.jar"/>
+<jar href="/jws-lib/imageio-core-3.5.jar"/>
+<jar href="/jws-lib/imageio-metadata-3.5.jar"/>
+<jar href="/jws-lib/imageio-jpeg-3.5.jar"/>
+</resources>
+</java>
+<java version="1.6" initial-heap-size="64M" max-heap-size="512M"/>
+
+		<jar href="/jws-nodum/manejador-cliente.jar" main="true"/>
+		
+<jar href="/jws-images/images-cliente.jar"/>
+
+<jar href="/jws-lib/commons-collections-2.1.jar"/>
+<jar href="/jws-lib/commons-logging-1.0.2.jar"/>
+<jar href="/jws-lib/commons-digester-1.7.jar"/>
+<jar href="/jws-lib/commons-io-1.3.1.jar"/>
+<jar href="/jws-lib/commons-httpclient-2.0.2.jar"/>
+<jar href="/jws-lib/higlayout.jar"/>
+<jar href="/jws-lib/iText-2.1.0.jar"/>
+<jar href="/jws-lib/jasperreports-3.7.6.jar"/>
+<jar href="/jws-lib/jasperreports-fonts-3.7.6.jar"/>
+<jar href="/nodum-jboss/jbossall-client.jar"/>
+<jar href="/jws-lib/jcalendar.jar"/>
+<jar href="/jws-lib/jcommon-1.0.16.jar"/>
+<jar href="/jws-lib/jfreechart-1.0.13.jar"/>
+<jar href="/jws-lib/jeksparser.jar"/>
+<jar href="/jws-lib/JTattoo-1.6.11.jar"/>
+<jar href="/jws-lib/looks-2.3.1.jar"/>
+<jar href="/jws-lib/MDateSelector.jar"/>
+<jar href="/jws-lib/poi-3.7-20101029.jar"/>
+<jar href="/jws-lib/dom4j-1.6.1.jar"/>
+<jar href="/jws-lib/xmlbeans-2.3.0.jar"/>
+<jar href="/jws-lib/poi-ooxml-schemas-3.7-20101029.jar"/>
+<jar href="/jws-lib/poi-ooxml-3.7-20101029.jar"/>
+<jar href="/jws-lib/poi-scratchpad-3.7-20101029.jar"/>
+<jar href="/jws-lib/servlet-api.jar"/>
+<jar href="/jws-lib/castor-0.9.5.2-xml.jar"/>
+<jar href="/jws-lib/xercesImpl.jar"/>
+<jar href="/jws-lib/xmlParserAPIs.jar"/>
+<jar href="/jws-lib/jdnc-jxcombobox.jar"/>
+<jar href="/jws-lib/jide-oss-3.6.18.jar"/>
+<jar href="/jws-lib/l2fprod-common-outlookbar.jar"/>
+<jar href="/jws-lib/avalon-framework-4.2.0.jar"/>
+<jar href="/jws-lib/xmlgraphics-commons-1.4.jar"/>
+<jar href="/jws-lib/fop-1.0.jar"/>
+<jar href="/jws-lib/javax.mail-1.5.6.jar"/>
+<jar href="/jws-lib/pdfbox-2.0.9.jar"/>
+<jar href="/jws-lib/fontbox-2.0.9.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-anim.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-awt-util.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-bridge.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-codec.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-css.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-dom.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-ext.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-extension.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-gui-util.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-gvt.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-parser.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-script.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-svg-dom.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-svggen.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-swing.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-transcoder.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-util.jar"/>
+<jar href="/jws-lib-batik-1.7/batik-xml.jar"/>
+<jar href="/jws-lib-batik-1.7/js.jar"/>
+<jar href="/jws-lib-batik-1.7/xml-apis-ext.jar"/>
+<jar href="/jws-lib-batik-1.7/xml-apis.jar"/>
+<jar href="/jws-lib/org.json.jar"/>
+<jar href="/jws-lib/nodum-fxcomponents-0.0.8.jar"/>
+<jar href="/jws-lib/icu4j-62.1.jar"/>
+<jar href="/jws-lib/metadata-extractor-2.14.0.jar"/>
+<jar href="/jws-lib/xmpcore-6.1.10.jar"/>
+
+<jar href="/jws-gendoc/gendoc-cliente.jar"/>
+<jar href="/jws-serviciosgenericos/serviciosgenericos-cliente.jar"/>
+<jar href="/jws-suite/suite-cliente.jar"/>
+
+		
+<jar href="/jws-activofijo/activofijo-cliente.jar"/>
+<jar href="/jws-comercial/comercial-cliente.jar"/>
+<jar href="/jws-compras/compras-cliente.jar"/>
+<jar href="/jws-contable/contable-cliente.jar"/>
+<jar href="/jws-costos/costos-cliente.jar"/>
+<jar href="/jws-gendoc/gendoc-cliente.jar"/>
+<jar href="/jws-impuestos/impuestos-cliente.jar"/>
+<jar href="/jws-modelo-nucleo/modelo-nucleo-cliente.jar"/>
+<jar href="/jws-pagos/pagos-cliente.jar"/>
+<jar href="/jws-produccion/produccion-cliente.jar"/>
+<jar href="/jws-serviciosgenericos/serviciosgenericos-cliente.jar"/>
+<jar href="/jws-stock/stock-cliente.jar"/>
+<jar href="/jws-proyectos/proyectos-cliente.jar"/>
+<jar href="/jws-generico/generico-cliente.jar"/>
+<jar href="/jws-genericofx/genericofx-cliente.jar"/>
+<jar href="/jws-rrhh/rrhh-cliente.jar"/>
+<jar href="/jws-tesoreria/tesoreria-cliente.jar"/>
+<jar href="/jws-efactura/efactura-cliente.jar"/>
+<jar href="/jws-localarg/localarg-cliente.jar"/>
+<jar href="/jws-localpy/localpy-cliente.jar"/>
+<jar href="/jws-localcol/localcol-cliente.jar"/>
+		
+<jar href="/jws-D4/D4-cliente.jar"/>
+<jar href="/jws-wms/wms-cliente.jar"/>
+<jar href="/jws-efactura/efactura-cliente.jar"/>
+		
+<property name="jnlp.rmpfx.nodum.app-server.name" value="jboss-4.0.4.GA"/>
+<property name="jnlp.rmpfx.nodum.home" value="#USER_HOME#/Nodum-Cliente"/>
+<property name="jnlp.rmpfx.servidor.dir" value="192.168.189.228"/>
+<property name="jnlp.rmpfx.servidor.port" value="8080"/>
+<property name="jnlp.rmpfx.servidor.protocol" value="http"/>
+<property name="jnlp.rmpfx.rmi.port" value=""/>
+<property name="jnlp.rmpfx.debug" value="false"/>
+
+
+	</resources>
+	
+	<application-desc main-class="uy.com.nodum.cliente.selector.MainSelector" />
+</jnlp>
