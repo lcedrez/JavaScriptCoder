@@ -364,20 +364,14 @@ const recuperarTotal=()=>{
 
 function finalizar(){
    
-   if(localStorage.getItem('claveCarro')!== null)
-    {
+
+    
 
     window.location.href = "../Paginas/FinalizarCompra.html";
-    } 
-    
-    
-        toastCarritoVacio()
-    
-
-     }
 
 
 
+}
 
 
 
