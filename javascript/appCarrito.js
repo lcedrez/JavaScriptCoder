@@ -326,6 +326,20 @@ const ActualizaTotalCarrito =(e)=>{
 
 }
 
+toastCarritoVacio=()=>{
+    Toastify({
+
+        text: "Ya Agrego este articulo al Carrito!!" ,
+        position: "center",   
+        duration: 2000,
+        style: {
+            background: "linear-gradient(to right, #ff9800, #c06500)",
+            
+          }
+        }).showToast();
+}
+
+
 
 
 const recuperarCarrito=()=>{
@@ -350,9 +364,15 @@ const recuperarTotal=()=>{
 
 function finalizar(){
    
-   
+   if(localStorage.getItem('claveCarro')!== null)
+    {
 
     window.location.href = "../Paginas/FinalizarCompra.html";
+    } 
+    
+    
+        toastCarritoVacio()
+    
 
      }
 

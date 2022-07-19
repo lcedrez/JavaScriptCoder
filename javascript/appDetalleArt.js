@@ -95,8 +95,6 @@ AlertaAgregaCarrito=(articuloRecibido)=>{
         
         <h5 class="card-title">Codigo:  <span class="spanAlertaCarrito">${articuloRecibido.cod_articulo}</span></h5>
         </div>
-        <br>
-        <br>
         <div class="btnAlerta">
         
         </div>

@@ -1232,21 +1232,32 @@ header{
 }
 
 
-
 /*Pie de Pagina*/
+
+
+#piePaginaFlex{
+    display: flex;
+}
+
+
+
 .pie-pagina{
-    width: 100%;
+    width: 1000px;
     background-color: black;
 }
 .pie-pagina .grupo-1{
    
-    margin: auto;
-    display:grid;
+    width: 100%;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(125px,auto);
-    grid-gap:5rem;
+    grid-gap: 5rem;
     padding: 45px 0px;
     background-color: black;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+    justify-items: stretch;
 }
 .pie-pagina .grupo-1 .box figure{
     width: 100%;
@@ -1278,7 +1289,7 @@ header{
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: #fff;
+    
     margin-right: 10px;
     background-color: #e8ecf0;
     text-align: center;
@@ -1326,7 +1337,7 @@ header{
     padding: 20px;
 }
 .red-social img{
-    width:30px;
+    width:100px;
     padding-top: 3px;
     margin: 5px;
 }

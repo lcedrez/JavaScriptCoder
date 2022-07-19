@@ -56,10 +56,11 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 }
 
 
-btonFinalizarCompra.addEventListener('click', () => {
-	validarFormulario()
+	
+	
+		
+	
 
-});
 
 const validarFormulario=()=>{
 
@@ -75,11 +76,28 @@ if(dir===""||depto===""|| ciudBarr===""||tel==="")
    }
    else 
    {
-    alert("Se valido un form	")
-   validarFormTarjeta()
+	validarFormTarjeta()
+	
    }
    
+
 }
+
+
+
+const paginaTienda=()=>{
+    
+	window.location.href = "../index.html";
+   
+ 
+ }
+ 
+
+
+
+
+ btonFinalizarCompra.addEventListener('click', validarFormulario) 
+
 
 const validarFormTarjeta=()=>{
 
@@ -91,8 +109,9 @@ const validarFormTarjeta=()=>{
 
     if(inputNum!=="" &&inputNombre!=="" &&inputMes!==""&&inputYear!=="")
     {
-        alert("Pago con exito")
-     //AlertaFinCompra()
+        
+		alerta()
+		paginaTienda()
     }
     
  }
@@ -117,40 +136,6 @@ toastFormulario=()=>{
 
 
        
-}
-
-AlertaFinCompra=()=>{
-    Swal.fire({
-        html: `
-        
-        <div class="contenedorAlerta">
-      
-        <h4 class="card-title">Pago <span class="spanAlertaNombre">Realizado con exito!!</span></h4>
-        
-        <h5 class="card-title">Recibira la factura en el correo :  <span class="spanAlertaCarrito">luciano.cedrez@gmail.com</span></h5>
-        </div>
-        <br>
-        <br>
-        <div class="btnAlerta">
-        
-        </div>
-           
-       
-        `,
-        showConfirmButton: false,
-        height:100,
-        width: 700,
-        imageWidth: 180,
-        imageHeight: 180,
-       
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-      })
-     
 }
 
 
@@ -252,7 +237,7 @@ const recuperarTotal=()=>{
     
 	totalFinal = JSON.parse(localStorage.getItem('TotalFinal')) 
 	 
-	 document.getElementById('spanTotal').textContent=totalFinal
+	 
 	 document.getElementById('spanTotal2').textContent=totalFinal
 	 let cuotas=Math.round(totalFinal/12)
 	 document.getElementById('parrafoCuotas').textContent=cuotas
@@ -270,6 +255,42 @@ const recuperarTotal=()=>{
     
 
 }
+
+const alerta=()=>{
+       
+	Swal.fire({
+        html: `
+        
+        <div class="contenedorAlerta">
+      
+        <h4 class="card-title">El articulo:<span class="spanAlertaNombre"></span> fue agregado al carrito</h4>
+        
+        <h5 class="card-title">Codigo:  <span class="spanAlertaCarrito"></span></h5>
+        </div>
+        <div class="btnAlerta">
+        
+        </div>
+           
+       
+        `,
+        showConfirmButton: false,
+        height:100,
+        width: 700,
+        imageWidth: 180,
+        imageHeight: 180,
+       
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+	  localStorage.clear()
+}
+
+
+
 
 
 localStorage.getItem('claveCarro')!== null && recuperarCarrito() || recuperarTotal() || ActualizaItems()
