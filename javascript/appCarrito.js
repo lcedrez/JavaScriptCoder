@@ -272,16 +272,17 @@ const calcularPorcentaje=(precioRecibido,descuentoRecibido)=>{
 const ActualizaTotalCarrito =(e)=>{
     //obtengo los datos del DOM para actualizar Sub Total y carrito
 
-    const precioArt =e.target.getAttribute('precio')
-    
+    let precioArt =e.target.getAttribute('precio')
+  
     const id=e.target.getAttribute('id')
     const codigo = e.target.getAttribute('codigo')
     const cantidadSeleccionada =parseInt(document.getElementById(id).value)
     
     const artiSeleccionado =carrito.find((auxiliar)=> auxiliar.cod_articulo==codigo)
     let indice = carrito.indexOf(artiSeleccionado)//obtengo Indice
-   
-
+    let valor= artiSeleccionado.precio*artiSeleccionado.descuento/100
+    precioArt-=valor
+    console.log(precioArt)
     let subTot=precioArt*cantidadSeleccionada
     //le paso al array el nuevo dato de sub total
   

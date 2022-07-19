@@ -68,16 +68,24 @@ const validarFormulario=()=>{
    const depto= document.getElementById("Departamento").value
    const ciudBarr= document.getElementById("CiudBarr").value
    const tel= document.getElementById("telFin").value
+
+   const inputNum=document.getElementById("inputNumero").value
+   const inputNombre=document.getElementById("inputNombre").value
+   const inputMes=document.getElementById("selectMes").value
+   const inputYear=document.getElementById("selectYear").value
+
+   
+   
  
-if(dir===""||depto===""|| ciudBarr===""||tel==="")
+if(dir===""||depto===""|| ciudBarr===""||tel===""|| inputNum===""|| inputNombre===""|| inputMes===""|| inputYear==="")
    {
     toastFormulario()
     
    }
    else 
    {
-	validarFormTarjeta()
-	
+	alerta()
+	paginaTienda()
    }
    
 
@@ -263,9 +271,9 @@ const alerta=()=>{
         
         <div class="contenedorAlerta">
       
-        <h4 class="card-title">El articulo:<span class="spanAlertaNombre"></span> fue agregado al carrito</h4>
+        <h4 class="card-title">Pago<span class="spanAlertaNombre"></span> realizado con exito!!</h4>
         
-        <h5 class="card-title">Codigo:  <span class="spanAlertaCarrito"></span></h5>
+        
         </div>
         <div class="btnAlerta">
         
