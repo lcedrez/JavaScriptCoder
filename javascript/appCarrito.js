@@ -10,7 +10,7 @@ const btnFinalizaCompra=document.querySelector('#btnFinalizaCompra')
 
 const imprimirCarro=()=>{
 
-         console.log(carrito)   
+           
     listadoCarrito.innerHTML=""
     carrito.forEach((producto)=>{
 
@@ -330,7 +330,7 @@ const ActualizaTotalCarrito =(e)=>{
 toastCarritoVacio=()=>{
     Toastify({
 
-        text: "Ya Agrego este articulo al Carrito!!" ,
+        text: "No tiene ningún Articulo en el carrito!!" ,
         position: "center",   
         duration: 2000,
         style: {
@@ -365,11 +365,16 @@ const recuperarTotal=()=>{
 
 function finalizar(){
    
-
-    
+console.log(carrito)
+    if(carrito.length==0)
+    {
+        toastCarritoVacio()
+    }
+    else
+    {
 
     window.location.href = "../Paginas/FinalizarCompra.html";
-
+    }
 
 
 }
