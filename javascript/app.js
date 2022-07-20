@@ -71,18 +71,19 @@ const busquedaArticulos=(e)=>{
 
 
 
-
+  const listadolimp=document.querySelector('#contenedorCards')
 //Creo funcion para mostrar todos los articulos
 const renderizarListProductos=(datos)=>{
-   
-    
+    //Limpio mi html para renderizar nuevamente ya se por orden alfabetico a precio
+   listadolimp.innerHTML=''
+    console.log(datos)
     datos.forEach((producto)=>{
         if(producto.descuento > 0)
         {
+
        const artDiv = document.createElement('div')
        let precio=producto.precio
         let precDescuento=(producto.descuento/100)*producto.precio
-
         producto.precio-=precDescuento
         artDiv.className='card-body'
         artDiv.innerHTML=`
@@ -106,7 +107,6 @@ const renderizarListProductos=(datos)=>{
     else
     {
         const artDiv = document.createElement('div')
-        
         artDiv.className='card-body'
         artDiv.innerHTML=`
         <img class="imgDetalle" src=${producto.imagen} alt="${producto.descripcion}" cod="${producto.cod_articulo}">
@@ -518,7 +518,6 @@ const EliminarDeCarrito=(e)=>{
 }
 
 
-
 const ActualizarTotal=(valorRecibido)=>{
 totalFinal+=parseInt(valorRecibido) 
 document.getElementById('spanTotal').textContent=totalFinal 
@@ -627,18 +626,11 @@ const cargarCatalogo = async ()=>{
     Object.keys(datos).forEach(key => {
          
         let nuevoArray = datos[key]; 
-
-       console.log(nuevoArray)
-        
-       localStorage.setItem('catalogo', JSON.stringify(nuevoArray));
-        
+        localStorage.setItem('catalogo', JSON.stringify(nuevoArray));
         renderizarListProductos(nuevoArray)
-
-       
-      
        
        
-      });
+       });
 
 
    
@@ -650,50 +642,101 @@ const cargarCatalogo = async ()=>{
         console.log(error)
     }
 }
+
+
+
 
 cargarCatalogo()
 
 
 
-const todosMisArticulos = async ()=>{
-    try{
-   const respuesta=await fetch("https://demo4551182.mockable.io/catalogo")
-   
-   if(respuesta.status=== 200){
-    const datos =await respuesta.json();
 
-    //convierto mi objerto en un array
-    Object.keys(datos).forEach(key => {
-         
-        let nuevoArray = datos[key]; 
+
+
+
+
+
+
+
+const OrdenaAlfabeticamente=(nuevoArray)=>{
+
+    nuevoArray.sort((a, b) => {
+        if ( a.nombre.toLowerCase() < b.nombre.toLowerCase()){
+            return -1;
+          }
+          if ( a.nombre.toLowerCase() > b.nombre.toLowerCase()){
+            return 1;
+          }
+          return 0;
+        });
+
+        renderizarListProductos(nuevoArray)
+
+}
+
+const OrdenaPorMenorPrecio=(nuevoArray)=>{
+
+    nuevoArray.sort((a, b) => {
+        return a.precio - b.precio;
+    });
+
+        renderizarListProductos(nuevoArray)
+
+}
+
+const agregaBtnOrden=()=>{
+    const ordenar=document.querySelectorAll('.dropDet')
+
+    ordenar.forEach((aux)=>{
+       aux.addEventListener('change',OrdenElegido)
+         })
         
-         catalogo=nuevoArray
+}
 
-       
-      
-       
-       
-      });
+const OrdenElegido=()=>{
+    const ordenSeleccionado =document.getElementById('dropDetalle').value
 
+    let  catalog = JSON.parse(localStorage.getItem('catalogo')) ||  []
 
-   
-   }
- 
-    }
-    catch(error)
+    if(ordenSeleccionado==="PriceLow")
     {
-        console.log(error)
+        catalog.sort((a, b) => {
+            return a.precio - b.precio;
+        });
+    
+            renderizarListProductos(catalog)
     }
+    else if(ordenSeleccionado==="PriceHigh")
+    {
+        catalog.sort((a, b) => {
+            return  b.precio - a.precio;
+        });
+    
+            renderizarListProductos(catalog)
+
+    }
+    else if(ordenSeleccionado==="Order")
+    {
+        catalog.sort((a, b) => {
+            if ( a.nombre.toLowerCase() < b.nombre.toLowerCase()){
+                return -1;
+              }
+              if ( a.nombre.toLowerCase() > b.nombre.toLowerCase()){
+                return 1;
+              }
+              return 0;
+            });
+           
+            renderizarListProductos(catalog)
+    }
+    
+  
 }
 
 
 
-
-
-
-
-
 agregarListennerEnter()
+agregaBtnOrden()
 
 
 localStorage.getItem('claveCarro')!== null && recuperarCarrito() || recuperarTotal() || ActualizaItems()
