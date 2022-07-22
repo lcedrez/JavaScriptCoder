@@ -10,6 +10,11 @@ const clickCarrito=document.querySelector('#carritoSearch')
 
 const productoDetalle=document.querySelector('#ContenedorGr')
 
+const productosInteresa=document.querySelector('#contenedorCardsInteresa')
+
+const clickbtnInteresa=document.querySelector('#btnInteres')
+
+
 const agregarArticuloCarrito= (e) => {
     
     const idSeleccionado = e.target.getAttribute('codigo')
@@ -56,6 +61,9 @@ const agregaBtnDetalle =()=>{
     boton.addEventListener('click',agregarArticuloCarrito)
     })
 }
+
+
+
 
 
 toastTalla=()=>{
@@ -248,6 +256,7 @@ AlertaAgregaCarrito=(articuloRecibido)=>{
                 `
                 
                 productoDetalle.append(artDetalle)
+                insertarInteresa(artEncontrado)
                 agregaBtnDetalle()
                 agregaBtnsCant()
                 agregaBtnsSize()
@@ -341,6 +350,7 @@ AlertaAgregaCarrito=(articuloRecibido)=>{
                 `
               
                 productoDetalle.append(artDetalle)
+                insertarInteresa(artEncontrado)
                 agregaBtnDetalle()
                 agregaBtnsCant()
      
@@ -361,6 +371,82 @@ AlertaAgregaCarrito=(articuloRecibido)=>{
        
 }
 
+const agregarListennerImagen =()=>{
+    // const idSeleccionado = e.target.getAttribute('cod')
+    
+     const clickImagen=document.querySelectorAll('.imgDetalleInteresa')
+     console.log('llega')
+     clickImagen.forEach((img)=>{
+         
+     img.addEventListener('click',redireccion)
+     })
+    
+ 
+ 
+ }
+
+
+
+ const btnInteresCatalogo =()=>{
+    // const idSeleccionado = e.target.getAttribute('cod')
+    
+     const clickImagen=document.querySelectorAll('.imgDetalleInteresa')
+    
+     clickImagen.forEach((img)=>{
+         
+     img.addEventListener('click',redireccion)
+     })
+    
+ 
+ 
+ }
+
+
+
+
+const insertarInteresa=(artRecibido)=>{
+   
+    let  catalogo = JSON.parse(localStorage.getItem('catalogo')) ||  []
+   
+    let expresion = new RegExp(`${artRecibido.categoria}.*`, "i");
+    let result = catalogo.filter(catalogo => expresion.test(catalogo.categoria) );
+
+   
+
+    renderizaInteresa(result)
+
+
+}
+const listadolimp=document.querySelector('#contenedorCardsInteresa')
+
+const renderizaInteresa=(datos)=>{
+    
+    let arrayinteres= datos.slice(-5)
+    listadolimp.innerHTML=''
+
+   arrayinteres.forEach((producto)=>{
+       
+            const artDiv = document.createElement('div')
+             artDiv.className='card'
+             artDiv.innerHTML=`
+             <img class="imgDetalleInteresa" style="cursor:pointer" src=../${producto.imagen} alt="${producto.descripcion}" cod="${producto.cod_articulo}" precioDesc="${producto.precio}" >
+             <h4 class="card-titleInteres">${producto.nombre}</h4>
+             <p class="card-textInteres">U$s ${producto.precio}</p>
+            
+         
+            </div>
+             `
+     
+             productosInteresa.append(artDiv)
+        
+            })
+            agregarListennerImagen()
+            btnInteresCatalogo()
+            
+           
+}
+
+    
 
 
 const paginaCarrito=()=>{
@@ -369,6 +455,13 @@ const paginaCarrito=()=>{
   
 
 }
+
+function redireccion(e){
+    const idSeleccionado = e.target.getAttribute('cod')
+    localStorage.setItem('idSeleccionado',idSeleccionado)  
+    window.location.href = "../Paginas/Articulos.html";
+
+     }
 
 const ExisteArtenCarro=(artrecibido)=>{
     
@@ -525,3 +618,4 @@ imprimirDetalle()
 
 
 localStorage.getItem('claveCarro')!== null && recuperarCarrito() || recuperarTotal() || ActualizaItems()
+
