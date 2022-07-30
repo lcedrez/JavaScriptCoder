@@ -3280,3 +3280,8 @@ padding-top: 70px;
 .card-textInteres{
     padding-left: 10px;
 }
+
+
+
+.contenedorInteres:hover .imgDetalleInteresa {-webkit-transform:scale(1.3);transform:scale(1.3);}
+.contenedorCardsInteresa {overflow:hidden;}
